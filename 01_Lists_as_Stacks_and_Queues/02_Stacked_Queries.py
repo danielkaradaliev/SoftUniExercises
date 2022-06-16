@@ -40,9 +40,9 @@ for _ in range(n):
         stack.push(int(command[1]))
     elif command[0] == "2":
         stack.remove()
-    elif command[0] == "3" and stack:
+    elif command[0] == "3":
         stack.print_max_value()
-    elif command[0] == "4" and stack:
+    elif command[0] == "4":
         stack.print_min_value()
 
 print(stack.print_stack())
