@@ -25,13 +25,12 @@ secondary_colors_found = {}
 
 while strings:
     substrings_to_check = []
-    if len(strings) == 1:
-        substrings = [strings.popleft()]
-        substrings_to_check.append(substrings[0])
-    else:
-        substrings = [strings.popleft(), strings.pop()]
-        substrings_to_check.append(substrings[0] + substrings[1])
-        substrings_to_check.append(substrings[1] + substrings[0])
+    first_substring = strings.popleft()
+    second_substring = strings.pop() if strings else ""
+    substrings = [first_substring, second_substring]
+
+    substrings_to_check.append(first_substring + second_substring)
+    substrings_to_check.append(second_substring + first_substring)
 
     for substring in substrings_to_check:
         if substring in main_colors_to_find:
