@@ -1,5 +1,5 @@
 class Flower:
-    def __init__(self, name: str, water_requirements: int, is_happy=False):
+    def __init__(self, name: str, water_requirements: int, is_happy: bool = False):
         self.name = name
         self.water_requirements = water_requirements
         self.is_happy = is_happy
