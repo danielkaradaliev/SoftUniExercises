@@ -26,7 +26,7 @@ class Stack:
     def print_stack(self):
         return ", ".join([str(x) for x in self.values[::-1]])
 
-    def __repr__(self):
+    def __str__(self):
         return ", ".join([str(x) for x in self.values])
 
 

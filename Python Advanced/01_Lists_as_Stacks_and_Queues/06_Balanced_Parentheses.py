@@ -14,7 +14,7 @@ class Stack:
     def __bool__(self):
         return bool(self.values)
 
-    def __repr__(self):
+    def __str__(self):
         return ", ".join(self.values)
 
 

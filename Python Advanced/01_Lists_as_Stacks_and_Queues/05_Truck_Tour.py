@@ -6,7 +6,7 @@ class PetrolStation:
         self.petrol_amount = petrol_amount
         self.distance = distance
 
-    def __repr__(self):
+    def __str__(self):
         return f"Petrol amount: {self.petrol_amount}, Distance to next: {self.distance}"
 
 
