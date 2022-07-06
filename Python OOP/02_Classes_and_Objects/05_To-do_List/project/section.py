@@ -27,4 +27,4 @@ class Section:
         return f"Cleared {tasks_removed} tasks."
 
     def view_section(self):
-        return f"Section {self.name}:{linesep}" + linesep.join([task.details for task in self.tasks])
+        return f"Section {self.name}:{linesep}" + linesep.join([task.details() for task in self.tasks])
