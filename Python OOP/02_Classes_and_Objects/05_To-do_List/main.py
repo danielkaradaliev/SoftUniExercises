@@ -1,5 +1,5 @@
-from task import Task
-from section import Section
+from project.task import Task
+from project.section import Section
 
 
 def main():
