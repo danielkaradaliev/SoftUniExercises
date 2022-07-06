@@ -1,4 +1,3 @@
-from task import Task
 from os import linesep
 
 
@@ -7,7 +6,7 @@ class Section:
         self.name = name
         self.tasks = list()
 
-    def add_task(self, new_task: Task):
+    def add_task(self, new_task):
         if new_task.name in [x.name for x in self.tasks]:
             return f"Task is already in the section {self.name}"
         self.tasks.append(new_task)
