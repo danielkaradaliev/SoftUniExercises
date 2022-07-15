@@ -3,9 +3,9 @@ class PhotoAlbum():
         self.pages = pages
         self.photos = [list() for _ in range(pages)]
 
-    @staticmethod
-    def from_photos_count(photos_count: int):
-        return PhotoAlbum((photos_count // 4) + int(bool(photos_count % 4)))
+    @classmethod
+    def from_photos_count(cls, photos_count: int):
+        return cls((photos_count // 4) + int(bool(photos_count % 4)))
 
     def add_photo(self, label: str):
         for index, page in enumerate(self.photos):
