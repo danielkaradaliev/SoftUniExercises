@@ -10,12 +10,12 @@ class DVD:
         self.age_restriction = age_restriction
         self.is_rented = False
 
-    @staticmethod
-    def from_date(id: int, name: str, date: str, age_restriction: int):
+    @classmethod
+    def from_date(cls, id: int, name: str, date: str, age_restriction: int):
         day, month, year = date.split(".")
         creation_month = calendar.month_name[int(month)]
         creation_year = int(year)
-        return DVD(name, id, creation_year, creation_month, age_restriction)
+        return cls(name, id, creation_year, creation_month, age_restriction)
 
     def __repr__(self):
         status = "rented" if self.is_rented else "not rented"
