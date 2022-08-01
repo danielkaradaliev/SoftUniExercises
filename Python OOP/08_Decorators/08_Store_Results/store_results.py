@@ -1,6 +1,3 @@
-from functools import wraps
-
-
 class store_results:
     __log_path = "./results.txt"
 
